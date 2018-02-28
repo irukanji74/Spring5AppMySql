@@ -4,10 +4,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Setter
+import java.math.BigDecimal;
+
 @Getter
+@Setter
 @NoArgsConstructor
-public class CategoryCommand {
+public class IngredientCommand {
     private Long id;
+    private Long recipeId;
     private String description;
+    private BigDecimal amount;
+    private UnitOfMeasureCommand uom;
 }
