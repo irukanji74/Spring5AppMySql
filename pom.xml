@@ -70,11 +70,11 @@
 			<artifactId>bootstrap</artifactId>
 			<version>4.0.0-1</version>
 		</dependency>
-		<dependency>
+		<!--<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>jquery</artifactId>
 			<version>3.3.1-1</version>
-		</dependency>
+		</dependency>-->
 
 	</dependencies>
 

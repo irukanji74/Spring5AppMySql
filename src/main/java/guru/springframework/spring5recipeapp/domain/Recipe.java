@@ -20,12 +20,12 @@ public class Recipe {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String description;
-    private Integer prepTime;
-    private Integer cookTime;
-    private Integer servings;
-    private String source;
-    private String url;
+    String description;
+     Integer prepTime;
+     Integer cookTime;
+    Integer servings;
+     String source;
+     String url;
 
     @Lob
     private String directions;
