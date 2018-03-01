@@ -20,12 +20,12 @@ public class Recipe {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    String description;
-     Integer prepTime;
-     Integer cookTime;
-    Integer servings;
-     String source;
-     String url;
+    private String description;
+    private Integer prepTime;
+    private Integer cookTime;
+    private Integer servings;
+    private String source;
+    private String url;
 
     @Lob
     private String directions;
@@ -36,7 +36,7 @@ public class Recipe {
     @Lob
     private Byte[] image;
 
-    @Enumerated(value = EnumType.STRING)//в базе будет хранится стринговое значение а не номер
+    @Enumerated(value = EnumType.STRING)//в базе будет хранится стринговое значение а не порядковый номер
     private Difficulty difficulty;
 
     @OneToOne(cascade = CascadeType.ALL)

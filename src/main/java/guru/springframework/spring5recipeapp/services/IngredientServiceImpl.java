@@ -76,13 +76,13 @@ public class IngredientServiceImpl implements IngredientService {
                     .stream()
                     .filter(ingredient -> ingredient.getId().equals(command.getId()))
                     .findFirst();
-
+// ссылаюсь на найденный ingredient и так как он находиться в attach состоянии я при помощи ссылки ingredientFound
+// изменяю его свойства на полученные новые в параметре метода
             if(ingredientOptional.isPresent()){
                 Ingredient ingredientFound = ingredientOptional.get();
                 ingredientFound.setDescription(command.getDescription());
                 ingredientFound.setAmount(command.getAmount());
-                ingredientFound.setUom(unitOfMeasureRepository
-                        .findById(command.getUom().getId())
+                ingredientFound.setUom(unitOfMeasureRepository.findById(command.getUom().getId())
                         .orElseThrow(() -> new RuntimeException("UOM NOT FOUND"))); //todo address this
             } else {
                 //add new Ingredient
