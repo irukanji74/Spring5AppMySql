@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Show Recipe</title>
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"
@@ -16,15 +15,13 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous" th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
 
-<!--
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-1/css/bootstrap.min.css}" />
+  <!--  <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-1/css/bootstrap.min.css}" />
     <script th:src="@{/webjars/bootstrap/4.0.0-1/js/bootstrap.min.js}"></script>
     <script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
 -->
-
 </head>
 <body>
-<!--/*@thymesVar id="recipe" type="guru.springframework.domain.Recipe"*/-->
+                     <!-- @thymesVar id="recipe" type="guru.springframework.spring5recipeapp.domain.Recipe"-->
 <div class="container-fluid" style="margin-top: 20px">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -57,9 +54,9 @@
                                 </ul>
                             </div>
                             <div class="col-md-6">
-                                <img src="../../images/guacamole400x400WithX.jpg"
-                                     th:src="@{'/recipe/' + ${recipe.id} + '/recipeimage'}"
-                                     width="200" height="200">
+                                <img th:src="@{/images/guacamole400x400WithX.jpg}" width="200" height="200"/>
+                                     <!--th:src="@{'/recipe/' + ${recipe.id} + '/recipeimage'}"
+                                     width="200" height="200"-->>
                             </div>
                         </div>
                         <div class="row">
