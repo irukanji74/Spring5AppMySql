@@ -4,6 +4,7 @@ import guru.springframework.spring5recipeapp.commands.RecipeCommand;
 import guru.springframework.spring5recipeapp.services.ImageService;
 import guru.springframework.spring5recipeapp.services.RecipeService;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +24,7 @@ public class ImageController {
     private final ImageService imageService;
     private final RecipeService recipeService;
 
+    @Autowired
     public ImageController(ImageService imageService, RecipeService recipeService) {
         this.imageService = imageService;
         this.recipeService = recipeService;
